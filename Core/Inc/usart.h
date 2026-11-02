@@ -32,25 +32,21 @@ extern "C" {
 
 /* USER CODE END Includes */
 
-extern UART_HandleTypeDef huart3;
+extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
 
-extern uint8_t RxBuffer[8];
-
-void Usart3_Init(void);
-void Usart3_SendByte(uint8_t Byte);
-uint8_t Usart3_GetRxFlag(void);
-uint8_t Usart3_GetRxData(void);
-void Usart3_SendArray(uint8_t *Array, uint16_t Length);
-void Usart3_SendString(char *String);
-
 /* USER CODE END Private defines */
 
-void MX_USART3_UART_Init(void);
+void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+extern uint8_t RxBuffer[8];
+void Usart1_Init(void);
+uint8_t Usart1_GetRxFlag(void);
+void Usart1_SendByte(uint8_t Byte);
+void Usart1_SendArray(uint8_t *Array, uint16_t Length);
+void Usart1_SendString(char *String);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
